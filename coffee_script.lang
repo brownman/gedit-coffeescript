@@ -47,7 +47,7 @@
     </styles>
 
     <definitions>
-        <context id="coffee">
+        <context id="coffee" class="no-spell-check">
             <include>
 
                 <!-- Comments -->
