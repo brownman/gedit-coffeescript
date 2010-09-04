@@ -34,7 +34,6 @@
         <style id="error"           _name="Error"                    map-to="def:error"/>
         <style id="string"          _name="String"                   map-to="def:string"/>
         <style id="global"          _name="Global Value"             map-to="def:special-constant"/>
-        <style id="constant"        _name="Constant"                 map-to="def:special-constant"/>
         <style id="boolean"         _name="Boolean value"            map-to="def:boolean"/>
         <style id="statement"       _name="Statement"                map-to="def:statement"/>
         <style id="loop"            _name="Loop"                     map-to="def:keyword"/>
@@ -45,7 +44,6 @@
         <style id="assessor"        _name="Assessor"                 map-to="def:identifier"/>
         <style id="regexp"          _name="RegExp"                   map-to="def:special-char"/>
         <style id="function"        _name="Function"                 map-to="def:function"/>
-        <style id="constructors"    _name="Constructors"             map-to="def:type"/>
     </styles>
 
     <definitions>
@@ -143,10 +141,6 @@
                     <keyword>null</keyword>
                 </context>
 
-                <context id="constant" style-ref="constant">
-                    <match>\b[A-Z0-9_]+\b</match>
-                </context>
-
                 <context id="boolean" style-ref="boolean">
                     <keyword>false</keyword>
                     <keyword>true</keyword>
@@ -218,10 +212,6 @@
 
                 <context id="functions" style-ref="function">
                     <keyword>\b[A-Za-z0-9_]+\b(?=\s*?(=|:)\s*?(\(|-\>|=\>))</keyword>
-                </context>
-
-                <context id="constructors" style-ref="constructors">
-                    <match>\b[A-Z][A-Za-z0-9_]+\b(?!\.)</match>
                 </context>
 
             </include>
